@@ -100,15 +100,11 @@ This script performs in-depth statistical and visual analysis on the `final_summ
 
 * **Exploratory Data Visualization:**
     * Generates histograms and box plots for all numerical columns to visualize their distributions, identify skewness, and detect outliers.
-    * **Numerical Columns Distributions (Histograms):**
-        ![Numerical Columns Histograms 1](https://github.com/user-attachments/assets/5b16e2ea-c255-4a5b-a7ed-025fe35d05d4)
-        ![Numerical Columns Histograms 2](https://github.com/user-attachments/assets/836e14d1-eb4a-4dab-9452-7a1f7a14b6c7)
-        *(Note: These images show distributions for various numerical columns like Purchase Price, Actual Price, Gross Profit, etc.)*
+    * **Numerical Columns Distributions (Histograms):** (Visualizations available in the gallery)
+        *(Note: These visualizations show distributions for various numerical columns like Purchase Price, Actual Price, Gross Profit, etc.)*
 
-    * **Numerical Columns Distributions (Box Plots):**
-        ![Numerical Columns Box Plots 1](https://github.com/user-attachments/assets/f0fc82db-b735-499d-9d5b-7d8f8c597391)
-        ![Numerical Columns Box Plots 2](https://github.com/user-attachments/assets/60b9cc05-e01f-47c2-b491-a568754e8345)
-        *(Note: These images display the spread and outliers for numerical columns using box plots.)*
+    * **Numerical Columns Distributions (Box Plots):** (Visualizations available in the gallery)
+        *(Note: These visualizations display the spread and outliers for numerical columns using box plots.)*
 
     * Provides a commentary section to interpret insights from these plots, specifically addressing negative/zero values (e.g., in `GrossProfit`, `ProfitMargin`, `TotalSalesQuantity`) and the presence of outliers (e.g., in `Purchase & Actual Prices`, `Freight Cost`, `Stock Turnover`).
 
@@ -117,48 +113,41 @@ This script performs in-depth statistical and visual analysis on the `final_summ
 
 * **Categorical Data Frequency:**
     * Creates count plots for top categorical columns (`VendorName`, `Description`) to show their frequencies.
-    * **Top Categorical Column Frequencies:**
-        ![Top Categorical Frequencies](https://github.com/user-attachments/assets/6f88bcdf-cfc6-4424-8fe4-5e1cd3f01f3d)
-        *(Note: This chart shows the frequency of top vendors and product descriptions.)*
+    * **Top Categorical Column Frequencies:** (Visualization available in the gallery)
+        *(Note: This visualization shows the frequency of top vendors and product descriptions.)*
 
 * **Correlation Analysis:**
     * Generates a correlation heatmap for numerical columns, with annotations to show the strength and direction of relationships between variables (e.g., purchase vs. sales quantities, profit margin vs. sales price, stock turnover vs. profitability).
-    * **Correlation Heatmap:**
-        ![Correlation Heatmap](https://github.com/user-attachments/assets/cfed4dc2-ba26-4e09-b5d8-a64b57e7bb9a)
+    * **Correlation Heatmap:** (Visualization available in the gallery)
     * Provides "Rephrased Correlation Insights" to explain the implications of observed correlations.
 
 * **Business Question: Brands for Promotional/Pricing Adjustments:**
     * Aggregates data by `Description` (Brand) to calculate `TotalSalesDollars` and `ProfitMargin`.
     * Identifies brands with `low sales performance` (below the 15th percentile of `TotalSalesDollars`) but `high profit margins` (above the 85th percentile of `ProfitMargin`).
     * Visualizes these target brands on a scatter plot, along with thresholds, to guide strategic decisions.
-    * **Brands for Promotional or Pricing Adjustments:**
-        ![Brands for Promo/Pricing Adjustments](https://github.com/user-attachments/assets/d42c3909-acc9-4ef3-b860-1bd5cf07b45f)
+    * **Brands for Promotional or Pricing Adjustments:** (Visualization available in the gallery)
 
 * **Business Question: Top Sales Performance & Profitability:**
     * Defines a helper function `format_dollars` for better readability of large monetary values.
     * Identifies and prints the top 10 vendors and brands by `TotalSalesDollars`.
     * Visualizes these top performers using side-by-side bar plots with formatted dollar values.
-    * **Top 10 Vendors and Brands by Total Sales Dollars:**
-        ![Top Vendors and Brands Sales](https://github.com/user-attachments/assets/f18933b3-c6ad-4234-a308-6fbe8dfee18e)
+    * **Top 10 Vendors and Brands by Total Sales Dollars:** (Visualization available in the gallery)
         *(Note: This combines the bar plots for top vendors and top brands by sales.)*
 
 * **Business Question: Vendor Procurement Cost Contribution:**
     * Aggregates `TotalPurchaseDollars`, `GrossProfit`, and `TotalSalesDollars` by `VendorName`.
     * Calculates `PurchaseContribution` for each vendor and the cumulative contribution of the top vendors.
     * Generates a **Pareto Chart** to visually represent vendor purchase contributions and their cumulative impact.
-    * **Pareto Chart: Vendor Purchase Contribution:**
-        ![Vendor Purchase Pareto Chart](https://github.com/user-attachments/assets/6695e028-8029-42f4-9883-74d722f54798)
+    * **Pareto Chart: Vendor Purchase Contribution:** (Visualization available in the gallery)
     * Also creates a **Donut Chart** to show the overall proportion of procurement cost attributed to the top 10 vendors versus others.
-    * **Top 10 Vendor Procurement Cost Contribution (Donut Chart):**
-        ![Vendor Procurement Donut Chart](https://github.com/user-attachments/assets/692ea7b3-94a1-4921-83c4-ded20ff8cb39)
+    * **Top 10 Vendor Procurement Cost Contribution (Donut Chart):** (Visualization available in the gallery)
 
 * **Business Question: Bulk Purchasing Impact on Unit Price:**
     * Calculates `UnitPrice` from `TotalPurchaseDollars` and `TotalPurchaseQuantity`.
     * Categorizes `TotalPurchaseQuantity` into 'Small', 'Medium', and 'Large' `OrderSize` using `pd.qcut`.
     * Visualizes the mean `UnitPrice` by `OrderSize` using a bar plot and a box plot to show the distribution.
-    * **Unit Price by Order Size (Box Plot):**
-        ![Unit Price by Order Size Box Plot](https://github.com/user-attachments/assets/824c6906-f835-40eb-b920-148a394aeaa1)
-        *(Note: This chart illustrates how unit price varies with order size.)*
+    * **Unit Price by Order Size (Box Plot):** (Visualization available in the gallery)
+        *(Note: This visualization illustrates how unit price varies with order size.)*
     * Provides a commentary on the observed cost advantages of larger order sizes.
 
 * **Business Question: Low Inventory Turnover & Unsold Inventory:**
@@ -170,56 +159,51 @@ This script performs in-depth statistical and visual analysis on the `final_summ
     * Defines a `confidence_interval` function to calculate the mean and 95% confidence interval for profit margins.
     * Prints the confidence intervals for both groups.
     * Visualizes the profit margin distributions of top and low vendors using overlaid histograms with confidence interval lines.
-    * **Confidence Interval Comparison: Top vs. Low Vendors (Profit Margin):**
-        ![Profit Margin Confidence Interval Comparison](https://github.com/user-attachments/assets/516a5b81-a9f8-45ff-8178-5a21e6463943)
-        *(Note: The URL for this image was not provided in the last set, so I used a placeholder URL. Please replace with the correct one if available.)*
+    * **Confidence Interval Comparison: Top vs. Low Vendors (Profit Margin):** (Visualization available in the gallery)
+        *(Note: The URL for this image was not provided in the last set, so I used a placeholder URL. Please replace with the correct one if available in your full gallery.)*
     * States the **Null (H₀)** and **Alternative (H₁)** Hypotheses for a two-sample t-test.
     * Performs a `ttest_ind` (independent t-test) comparing the profit margins of top and low-performing vendors.
     * Prints the t-statistic and p-value, and interprets the result to determine if there's a statistically significant difference in profit margins.
     * Offers actionable insights based on the confidence interval and hypothesis test results for both top and low-performing vendors.
 
-## How to Run
 
-1.  **Clone the repository:**
+## 🖼️ Visualizations Gallery
 
-    ```bash
-    git clone [https://github.com/your-username/your-repo-name.git](https://github.com/your-username/your-repo-name.git)
-    cd your-repo-name
-    ```
+Here you can find all the visualizations generated by `visualanalysis.py`, offering a quick overview of the data insights.
 
-2.  **Acquire Data:** As mentioned in the "Data" section, you will need to obtain the necessary CSV files (e.g., `begin_inventory.csv`, `sales.csv`, etc.) and place them in a `data/` directory within the project root.
+### Numerical Columns Histograms
+![Numerical Columns Histograms 1](https://github.com/user-attachments/assets/5b16e2ea-c255-4a5b-a7ed-025fe35d05d4)
+![Numerical Columns Histograms 2](https://github.com/user-attachments/assets/836e14d1-eb4a-4dab-9452-7a1f7a14b6c7)
 
-3.  **Install Dependencies:**
+### Numerical Columns Box Plots
+![Numerical Columns Box Plots 1](https://github.com/user-attachments/assets/f0fc82db-b735-499d-9d5b-7d8f8c597391)
+![Numerical Columns Box Plots 2](https://github.com/user-attachments/assets/60b9cc05-e01f-47c2-b491-a568754e8345)
 
-    ```bash
-    pip install pandas sqlalchemy matplotlib seaborn numpy scipy
-    ```
+### Top Categorical Column Frequencies
+![Top Categorical Frequencies](https://github.com/user-attachments/assets/6f88bcdf-cfc6-4424-8fe4-5e1cd3f01f3d)
 
-4.  **Ingest Raw Data:** Run the `ingestion_DB.py` script to populate your SQLite database with the raw CSV data:
+### Correlation Heatmap
+![Correlation Heatmap](https://github.com/user-attachments/assets/cfed4dc2-ba26-4e09-b5d8-a64b57e7bb9a)
 
-    ```bash
-    python ingestion_DB.py
-    ```
+### Brands for Promotional or Pricing Adjustments
+![Brands for Promo/Pricing Adjustments](https://github.com/user-attachments/assets/d42c3909-acc9-4ef3-b860-1bd5cf07b45f)
 
-5.  **Generate and Clean Summary Table:** Execute `get_summary_table.py` to create the comprehensive `vendor_summary` table in your database:
+### Top 10 Vendors and Brands by Total Sales Dollars
+![Top Vendors and Brands Sales](https://github.com/user-attachments/assets/f18933b3-c6ad-4234-a308-6fbe8dfee18e)
 
-    ```bash
-    python get_summary_table.py
-    ```
+### Pareto Chart: Vendor Purchase Contribution
+![Vendor Purchase Pareto Chart](https://github.com/user-attachments/assets/6695e028-8029-42f4-9883-74d722f54798)
 
-6.  **Perform Visual and Statistical Analysis:** Run `visualanalysis.py` to generate plots, perform statistical tests, and print insights:
+### Top 10 Vendor Procurement Cost Contribution (Donut Chart)
+![Vendor Procurement Donut Chart](https://github.com/user-attachments/assets/692ea7b3-94a1-4921-83c4-ded20ff8cb39)
 
-    ```bash
-    python visualanalysis.py
-    ```
+### Unit Price by Order Size (Box Plot)
+![Unit Price by Order Size Box Plot](https://github.com/user-attachments/assets/824c6906-f835-40eb-b920-148a394aeaa1)
 
-    *Important:* When `visualanalysis.py` runs, it will display several plots. You will need to **save each plot image manually** (e.g., using the save button in the plot window) into an `images/` directory within your repository. Ensure the filenames match the ones referenced in this `README.md` (e.g., `histogram_numerical_cols.png`, `boxplot_numerical_cols.png`, etc.). Close each plot window to allow the script to continue.
+### Profit Margin Comparison: Top vs. Low Vendors
+![Profit Margin Confidence Interval Comparison](https://github.com/user-attachments/assets/516a5b81-a9f8-45ff-8178-5a21e6463943)
+*(Note: Please ensure the correct URL for this image. The one provided previously was a placeholder.)*
 
-7.  **Explore Data (Optional):** You can also use `eda.py` to explore the ingested data and the generated summary table interactively or for quick checks:
-
-    ```bash
-    python eda.py
-    ```
 
 ## Database Schema (for `final_summary_table` / `vendor_summary`)
 
