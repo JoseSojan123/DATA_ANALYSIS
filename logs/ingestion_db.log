@@ -1,0 +1,29 @@
+2025-06-15 21:16:10,211 - INFO - Ingesting begin_inventory.csv into the database
+2025-06-15 21:16:11,339 - INFO - Ingesting end_inventory.csv into the database
+2025-06-15 21:16:15,293 - INFO - Ingesting purchases.csv into the database
+2025-06-15 21:16:37,746 - INFO - Ingesting purchase_prices.csv into the database
+2025-06-15 21:16:50,308 - INFO - Ingesting sales.csv into the database
+2025-06-15 21:20:40,414 - INFO - Ingesting vendor_invoice.csv into the database
+2025-06-15 21:20:40,505 - INFO - All files ingested successfully!
+2025-06-15 21:20:40,506 - INFO - Total time taken to ingest all files: 4.5077899893124895 minutes
+2025-06-16 12:53:39,362 - INFO - Creating vendor summary table
+2025-06-16 12:54:43,940 - INFO - Creating vendor summary table
+2025-06-16 12:54:59,324 - INFO -    VendorNumber                   VendorName  ...  TotalExciseTax FreightCost
+0          1128  BROWN-FORMAN CORP            ...       260999.20    68601.68
+1          4425        MARTIGNETTI COMPANIES  ...       294438.66   144929.24
+2         17035  PERNOD RICARD USA            ...       343854.07   123780.22
+3          3960  DIAGEO NORTH AMERICA INC     ...       368242.80   257032.07
+4          3960  DIAGEO NORTH AMERICA INC     ...       249587.83   257032.07
+
+[5 rows x 14 columns]
+2025-06-16 12:54:59,332 - INFO - Cleaning the data
+2025-06-16 12:54:59,337 - INFO -    VendorNumber                VendorName  ...  StockTurnover SalesToPurchaseRatio
+0          1128         BROWN-FORMAN CORP  ...       0.979108             1.338647
+1          4425     MARTIGNETTI COMPANIES  ...       0.976890             1.266830
+2         17035         PERNOD RICARD USA  ...       0.998575             1.327594
+3          3960  DIAGEO NORTH AMERICA INC  ...       0.993703             1.372493
+4          3960  DIAGEO NORTH AMERICA INC  ...       0.983556             1.396897
+
+[5 rows x 18 columns]
+2025-06-16 12:54:59,343 - INFO - Ingesting the cleaned data into the database
+2025-06-16 12:54:59,373 - INFO - Vendor summary table created and ingested successfully
