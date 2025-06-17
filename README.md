@@ -1,31 +1,13 @@
 # 📊 Inventory and Sales Data Analysis
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 [![Python 3.x](https://img.shields.io/badge/Python-3.x-blue.svg)](https://www.python.org/downloads/)
 [![Project Status](https://img.shields.io/badge/Status-Completed-brightgreen)](https://github.com/your-username/your-repo-name)
 
 Welcome to the Inventory and Sales Data Analysis project! 🚀 This repository houses a robust set of Python scripts designed to provide deep insights into a company's inventory, purchases, sales, and vendor performance. By transforming raw data into a comprehensive vendor summary table, we unlock crucial metrics like profitability, stock turnover, and freight costs, empowering data-driven strategic decisions.
 
----
 
-## 📋 Table of Contents
 
-* [Project Overview](#-project-overview)
-* [Data](#-data)
-* [Log Files](#-log-files)
-* [Key Features](#-key-features)
-* [Scripts](#-scripts)
-    * [`ingestion_DB.py`](#-ingestion_dbpy)
-    * [`eda.py`](#-edapy)
-    * [`get_summary_table.py`](#-get_summary_tablepy)
-    * [`visualanalysis.py`](#-visualanalysispy)
-* [Visual Insights](#-visual-insights)
-* [How to Run](#-how-to-run)
-* [Database Schema](#-database-schema)
-* [Potential Future Enhancements](#-potential-future-enhancements)
-* [License](#-license)
-
----
 
 ## 🏗️ Project Structure
 
