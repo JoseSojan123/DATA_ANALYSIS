@@ -1,3 +1,13 @@
+# Large files
 data/purchases.csv
 data/sales.csv
 inventory.db
+
+# Ignore all inventory-related CSVs
+data/begin_inventory.csv
+data/end_inventory.csv
+data/purchase_prices.csv
+data/vendor_invoice.csv
+
+# Jupyter checkpoints (correct path)
+data/.ipynb_checkpoints/
